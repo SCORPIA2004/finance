@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Portfolio
+{% endblock %}
+
+{% block main %}
+
+<div class="mb-3">
+    <h1 style="text-align: left;">Welcome, {{ name }}<br></h1>
+    <h3>My Stocks:</h3>
+
+    <table class="table table-hover table-bordered">
+        <thead>
+            <th>Symbol</th>
+            <th>shares</th>
+            <th>Unit cost</th>
+            <th>Total cost</th>
+        </thead>
+        <tbody>
+            {% for stock in data %}
+                <tr>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["shares"] }}</td>
+                    <td>{{ stock["unit_cost"] }}</td>
+                    <td>{{ stock["total_cost"] }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align: right;"><b>My balance</b></td>
+                <td>{{ cashusd }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align: right;"><b>Total value</b></td>
+                <td>{{ totalvalue }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

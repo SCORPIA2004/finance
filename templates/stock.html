@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Details
+{% endblock %}
+
+{% block main %}
+
+<div class="mb-3">
+    <h1>Stock Details<br></h1>
+    <h3>Name: {{ stock["name"]}}</h3>
+    <h3>Price: {{ price }}</h3>
+    <h3>Symbol: {{ stock["symbol"]}}</h3>
+</div>
+
+{% endblock %}

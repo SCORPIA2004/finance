@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction history
+{% endblock %}
+
+{% block main %}
+
+<div class="mb-3">
+    <h3>Transaction history</h3>
+
+    <table class="table table-hover table-bordered">
+        <thead>
+            <th>id</th>
+            <th>Timestamp</th>
+            <th>Symbol</th>
+            <th>shares</th>
+            <th>Unit cost</th>
+            <th>Total cost</th>
+        </thead>
+        <tbody>
+            {% for stock in data %}
+                {% if stock["status"] == 0 %}:
+                    <tr class="table-danger">
+                {% else %}
+                    <tr class="table-success">
+                {% endif %}
+
+                    <td>{{ stock["h_id"] }}</td>
+                    <td>{{ stock["day"] }}/{{ stock["month"] }}/{{ stock["year"] }}  {{ stock["hour"] }}:{{ stock["minute"] }}:{{ stock["second"] }}</td>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["shares"] }}</td>
+                    <td>{{ stock["unit_cost"] }}</td>
+                    <td>{{ stock["total_cost"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

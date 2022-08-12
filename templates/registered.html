@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My portfolio
+{% endblock %}
+
+{% block main %}
+
+<!-- <h2>Registered successfully</h2> -->
+
+<div class="mb-3">
+    <h1 style="text-align: left;">Welcome, <br></h1>
+    <h3>My Stocks:</h3>
+
+    <table class="table table-hover table-bordered">
+        <thead>
+            <th>Symbol</th>
+            <th>shares</th>
+            <th>Unit cost</th>
+            <th>Total cost</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align: right;"><b>My balance</b></td>
+                <td>$10,000<td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align: right;"><b>Total value</b></td>
+                <td>$10,000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 style="text-align: left;"><br><br>You have not bought any stocks!</h3>
+</div>
+
+{% endblock %}
