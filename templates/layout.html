@@ -40,7 +40,6 @@
                             <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
                         </ul>
                     {% else %}
-                    <img src="home.jpg" class="img-fluid" alt="home">
                         <ul class="navbar-nav ms-auto mt-1">
                            <li class="nav-item"><button type="button" href="/register" class="btn btn-outline-info">Register</button></li>
                         </ul>
@@ -48,6 +47,8 @@
                 </div>
             </div>
         </nav>
+
+        <img src="home.jpg" class="img-fluid" alt="home">
 
         {% if get_flashed_messages() %}
             <header>
