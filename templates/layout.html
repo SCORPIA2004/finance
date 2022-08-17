@@ -21,6 +21,12 @@
     </head>
 
     <body>
+        <!-- disclaimer -->
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <h4 class="alert-heading">Disclaimer: </h4>
+            <p class="mb-0">Data shown is not real. I only used it for test purposes, courtesy of IEX cloud</p>
+        </div>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
@@ -61,7 +67,7 @@
             {% block main %}{% endblock %}
         </main>
 
-        <footer class="small text-center text-muted position-absolute bottom-0 end-50">
+        <footer class="fixed-bottom mx-auto w-auto small text-center text-muted">
             New Data provided by <a href="https://iexcloud.io/">IEX</a>
         </footer>
 
